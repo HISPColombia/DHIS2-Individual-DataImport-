@@ -1,0 +1,13 @@
+{
+	"version":"1"
+	,"name":"Import Tracked Data value and entities to DHIS2"
+	,"description":"Import Tracked Data value and entities to DHIS2"
+	,"icons":{"16":null,"48":"img/icon48.png","128":"img/icon128.png"}
+	,"developer":{"url":"www.hispcolombia.org","name":"Helder Castrillon","company":"Hisp Colombia","email":"heldersoft@gmail.com"}
+	,"launch_path":"index.html"
+	,"installs_allowed_from":null
+	,"default_locale":"es"
+	,"activities": {
+	  "dhis": { "href": "*" }
+	}
+}

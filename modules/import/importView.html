@@ -1,0 +1,132 @@
+﻿<div class="row text-right">
+    <div class="col-md-11">
+      
+            <a href="../../../"  type="button" class="btn btn-info" aria-label="Left Align">
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+            </a>
+       
+     </div>
+    <div class="col-md-1">
+    </div>
+   
+</div>
+<br />
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>{{'LABEL_OPTIONIMPORT'| translate}}</h3>
+                            </div>
+                            <div class="col-md-12 form-group has-success">
+                                <input type="file" accept=".json" class="form-control" file-change="handler($event,files)" ng-model="MyFiles" ng-disabled="initImport" />
+                            </div>
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-info" ng-click="readFile()" >{{ 'BTN_READ' | translate }}</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)"><div style="width:100%; word-wrap:break-word;">{{alert.msg}}</div></alert>
+                    <div ng-show="Importfinished"> 
+                        <button ng-click="saveJson(Importerror,'ListError.json')" class="btn btn-primary">{{'BTN_SAVEERROR' | translate}} </button>
+                        <button ng-click="saveJson(ImportValueError,'objectReview.json')" class="btn btn-primary">{{'BTN_SAVEJSON' | translate}} </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3>{{'LABEL_INFOFILE'| translate}}</h3>
+                        <table class="table table-hover">
+                            <tr class="info">
+                                <th>Tipo de Información:</th>
+                                <th>{{typeinformation}}</th>
+                            </tr>
+                            <tr>
+                                <th>Número de registros:</th>
+                                <td>{{numRegister}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label>{{'LABEL_METHOD'| translate}}</label><br />
+                                <input type="radio" name="verb" ng-model="webMethod" value="POST" ng-click="activateUpStatus()" ng-checked="true" ng-disabled="readyForImport">POST
+                                <input type="radio" name="verb" ng-model="webMethod" value="PUT" ng-click="activateUpStatus()" ng-disabled="readyForImport"> PUT
+                                <input type="radio" name="verb" ng-model="webMethod" value="DELETE" ng-click="activateUpStatus()" ng-disabled="readyForImport"> DELETE
+                                <input type="radio" name="verb" ng-model="webMethod" value="PATCH" ng-click="activateUpStatus()" ng-disabled="readyForImport"> PATCH
+                                
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <br />
+                                {{'LABEL_NUMINIT'| translate}} <input type="text" ng-model="numposition" value="0" id="init"  ng-disabled="readyForImport" size="2"/>
+                                <span>  </span>{{'LABEL_LEN'| translate}}<input type="text" ng-model="lenposition" value="1" id="lenJson" ng-disabled="readyForImport" size="2" />
+                               
+                            </div>
+                            <div class="row">
+                                <div class="col-md-11">
+                                    <span>  </span>
+
+                                    <div ng-show="upStatusEnrollmentOption">
+                                        <input type="checkbox" ng-model="upStatusEnrrollment" /> {{'LABEL_CHANGESTATUS'| translate}}
+                                    </div>                                
+                                    <div ng-show="strategyOption">
+                                        <label>Strategy</label><br />
+                                        <input type="radio" name="strategy" ng-model="strategy" value="CREATE" ng-click="changeStrategy()" ng-disabled="readyForImport"> CREATE
+                                        <input type="radio" name="strategy" ng-model="strategy" value="CREATE_AND_UPDATE" ng-click="changeStrategy()" ng-disabled="readyForImport"> CREATE_AND_UPDATE
+                                        <input type="radio" name="strategy" ng-model="strategy" value="DELETE" ng-click="changeStrategy()" ng-disabled="readyForImport"> DELETE
+                                        <input type="radio" name="strategy" ng-model="strategy" value="" ng-click="changeStrategy()" ng-disabled="readyForImport" ng-checked="true"> NONE
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-info" ng-click="startImport(numposition)" ng-disabled="readyForImport">{{'BTN_IMPORT_START'| translate}}</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <progressbar class="progress-striped active" max="100" value="kon" type="success"><i>{{kon}}</i></progressbar>
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-success" type="button" ng-disabled="true">
+            {{'LABEL_GOODIMPORT' | translate}} <span class="badge">{{objImported}}</span>
+        </button>
+        <button class="btn btn-danger" type="button" ng-disabled="true">
+            {{'LABEL_BADIMPORT' | translate}} <span class="badge">{{objNoImported}}</span>
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-11">
+        <div style="height:70%; overflow-y:scroll;">
+            <table class="table table-condensed">
+                <tr><th class="text-center"><h3>{{'LIST_ERROR' | translate}}</h3></th></tr>
+
+                <tr ng-repeat="err in Importerror track by $index">
+                    <td><json-explorer data="err"></json-explorer></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
