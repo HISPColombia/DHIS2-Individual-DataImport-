@@ -91,7 +91,7 @@
             var value = $scope.dataforImport[$scope.typeinformation][position];
         else {
             var value = {};
-            value[$scope.typeinformation] = $scope.dataforImport[$scope.typeinformation].slice(position, position + $scope.lenposition * 1);
+            value[$scope.typeinformation] = $scope.dataforImport[$scope.typeinformation].slice(position*1, position*1 + $scope.lenposition * 1);
         }
             
 
@@ -103,8 +103,14 @@
         ///setting params needed for 
         if ($scope.webMethod != "POST")
             var param = { id: value[uid] };
-        else
-            var param = { strategy: $scope.strategy };
+        else{
+            
+            if($scope.typeinformation=="events")
+                var param = { importStrategy: $scope.strategy };
+            else
+                var param = { strategy: $scope.strategy };
+        }
+            
         
         ////execute method
         $scope.excecuteMethod(currentMethod, param, value, position);
