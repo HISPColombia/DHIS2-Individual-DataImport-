@@ -1,7 +1,7 @@
 # Apps para soportar el proceso de importación de datos históricos 
 # HISP Colombia 2016.
 
-#descripción general.
+# Descripción general.
 La aplicación permite hacer POST,PUT,DELETE,PATCH a los siguientes recursos de la API:
  - trackedentityinstance 
  - events
