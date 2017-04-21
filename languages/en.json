@@ -1,6 +1,6 @@
 {
 	"_______________ Common ":" for APPS_____________",
-  "TITLE_APPS":"IMPORT TRACKED DATA VALUES AND ENTITIES",
+  "TITLE_APPS":"Import Tracker Data Values and Entities",
   "YES":"Si",
   "NO": "No",
   "IMPORT_START": "Import Start",
@@ -16,7 +16,7 @@
   "MSG_ERRORFORIMPORT": "The file has the error: ",
   "MSG_READYFORIMPORT": "File ready for import",
   "MSG_INTRO": "verify that the json file has the structute and conent required for data import in DHIS, acording to type information",
-  "MSG_FINISHED": "Importaci�n finalizada",
+  "MSG_FINISHED": "Importación finalizada",
   "LIST_ERROR": "Error List",
    "BTN_SAVEERROR": "Save error list",
   "BTN_SAVEJSON": "Save objects don't imported",
