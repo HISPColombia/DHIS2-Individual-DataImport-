@@ -104,11 +104,7 @@
         if ($scope.webMethod != "POST")
             var param = { id: value[uid] };
         else{
-            
-            if($scope.typeinformation=="events")
-                var param = { importStrategy: $scope.strategy };
-            else
-                var param = { strategy: $scope.strategy };
+            var param = { strategy: $scope.strategy };
         }
             
         
