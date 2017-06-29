@@ -17,7 +17,7 @@ La aplicaicón permite hacer POST,PUT,DELETE,PATCH a los siguentes recursos de l
  4. informa el número de registros a importar, los importados y los que presentan errores.
  5. perite iniciar la importación en la posición que se deses.
  **New
- 6. Compatible con la versión 2.22, incluye la variable Strategy en las opiones de importación.
+ 6. Compatible con la versión 2.26, incluye la variable Strategy en las opiones de importación.
  7. Permite importar en bloque los objetos, el tamaño lo configura el usuario en la opcion (Length, Número de objeto)
  
  # recomendaciones especiales.
