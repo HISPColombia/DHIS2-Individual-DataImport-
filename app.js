@@ -6,6 +6,10 @@ appImport.config(function($routeProvider) {
 	      templateUrl: "modules/import/importView.html",
 	      controller: "importController"
 	  });
+	  $routeProvider.when('/export', {
+		templateUrl: "modules/export/exportView.html",
+		controller: "exportController"
+	});
 	  $routeProvider.otherwise({
 	      redirectTo: '/import'
 	  });   

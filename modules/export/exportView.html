@@ -1,0 +1,118 @@
+<div class="row text-right">
+    <div class="col-md-11">
+
+        <a href="../../../" type="button" class="btn btn-info" aria-label="Left Align">
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+        </a>
+
+    </div>
+    <div class="col-md-1">
+    </div>
+
+</div>
+<br />
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>{{'LABEL_OPTIONEXPORT'| translate}}</h3>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>{{'LABEL_SELECT_PROGRAM'| translate}}</label><br />
+                                        <div class="dropdown">
+                                            <button id="dLabel" type="button" class="btn btn-info"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                {{ProgramName?ProgramName:'SELECT' | translate}}
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                                <li ng-repeat="data in ListProgram">
+                                                    <a ng-click='selectProgram(data)'>{{data.name}}</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>{{'LABEL_START_DATE'| translate}}</label><br />
+                                        <input ng-change="validateSelectOption()" type="date" ng-model="startDate" class="form-control"
+                                            placeholder="YYYY-MM-DD" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>{{'LABEL_END_DATE'| translate}}</label><br />
+                                        <input ng-change="validateSelectOption()" type="date" ng-model="endDate" class="form-control"
+                                            placeholder="YYYY-MM-DD" />
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row">
+                                    <div  class="col-md-6"></div>
+                                    <div  class="col-md-6">
+                                            <div class="well"> {{'LABEL_DESCRIPTION_DATE'| translate}} </div> 
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="panel-footer" style="text-align:right">
+                            <label>{{'LABEL_ZIP'| translate}}</label>: 
+                            <input type="checkbox" name="zip" ng-model="zipped" ng-disabled="disabledGen">
+
+                                <button type="button" class="btn btn-primary"
+                                    ng-click="generateExport()" ng-disabled="disabledGen">{{ 'BTN_GENERATE_FILES' | translate }}</button>
+                       
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                            <h3>{{'LABEL_INFOFILE_DOWNLOAD'| translate}} </h3>
+                        <div class="row">
+                                <div class="col-md-5">
+                                    <ul>
+                                        <li><label>{{'LABEL_PROGRAM_NAME'| translate}}</label>: {{ProgramName}}</li>
+                                        <li><label>{{'LABEL_START_DATE'| translate}}</label> : {{startDateFormated}}</li>
+                                        <li><label>{{'LABEL_END_DATE'| translate}}</label>: {{endDateFormated}}</li>
+                                                     </ul>
+                                    <div class="well"> {{'LABEL_DESCRIPTION_DOWNLOAD'| translate}} </div> 
+                                </div>
+                                <div class="col-md-1"></div>
+                                <div class="col-md-6" style="text-align:left">
+                                        <a style="margin:5" class="btn btn-success" href="{{trackedEntityInstanceURL}}"  ng-disabled="disabled" target="_blank" download="Entities">
+                                                {{'LABEL_INFOFILE_DOWNLOAD_TEI'| translate}}
+                                            </a>
+                                            <br/>
+                                            <a  style="margin:5" class="btn btn-success" href="{{enrollmentURL}}" ng-disabled="disabled" target="_blank" download="Enrollments">
+                                                {{'LABEL_INFOFILE_DOWNLOAD_ENROLLMENT'| translate}}
+                                            </a>
+                                            <br/>
+                                            <a style="margin:5" class="btn btn-success" href="{{eventURL}}"  ng-disabled="disabled" target="_blank" download="Events">
+                                                {{'LABEL_INFOFILE_DOWNLOAD_EVENT'| translate}}
+                                            </a>
+                                </div>
+
+                        </div>
+                       
+                       
+                    </div>
+                    <div class="panel-footer" style="text-align:right">
+                            <button  ng-click="clearExport()" type="button" class="btn btn-primary">{{'BTN_RESET'| translate}}</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

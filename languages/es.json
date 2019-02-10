@@ -1,6 +1,6 @@
 {
 	"_______________ Common ":" for APPS_____________",
-  "TITLE_APPS":"Import Tracker Data Values and Entities",
+  "TITLE_APPS":"IMPORT & EXPORT DATA VALUES AND ENTITIES TRACKED - VERSION #2",
   "YES":"Si",
   "NO": "No",
   "IMPORT_START": "Iniciar Importacion",
@@ -24,5 +24,26 @@
   "LABEL_LEN": "Número de objeto: ",
   "LABEL_GOODIMPORT": "Importados",
   "LABEL_BADIMPORT": "No Importados",
-  "LABEL_CHANGESTATUS": "Cambiar estado de enrollment"
+  "LABEL_CHANGESTATUS": "Cambiar estado de enrollment",
+  "LABEL_OPTIONEXPORT":"Exportar Información",
+  "LABEL_SELECT_PROGRAM":"Seleccione un programa",
+  "LABEL_START_DATE":"Fecha Inicial",
+  "LABEL_END_DATE":"Fecha final",
+  "BTN_IMPORT":"Importar",
+  "BTN_EXPORT":"Exportar",
+  "TITLE_OPTION":"Panel de opciones",
+  "BTN_GENERATE_FILES":"Generar Archivos",
+  "LABEL_INFOFILE_DOWNLOAD":"Archivos de descarga ",
+  "LABEL_INFOFILE_DOWNLOAD_TEI":"Desgargar Personas/Entidades",
+  "LABEL_INFOFILE_DOWNLOAD_ENROLLMENT":"Descargar registros al programa",
+  "LABEL_INFOFILE_DOWNLOAD_EVENT":"Descargar datos del programa",
+  "BTN_RESET":"Reiniciar Exportación",
+  "LABEL_PROGRAM_NAME":"Programa",
+  "LABEL_DESCRIPTION_DOWNLOAD":"No olvides cambiar el nombre del archivo antes de guardarlos, sobre todo cuando está comprimido",
+  "LABEL_DESCRIPTION_DATE":" Tenga en cuenta que el rango de fecha corresponde al periodo en el cual fue actualizada la información",
+  "LABEL_ZIP":"Comprimido"
+
+
+
+
 }

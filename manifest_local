@@ -1,7 +1,7 @@
 {
-	"version" : "1.2",
-	"name" : "Import Tracker Data",
-	"description" : "Import Tracked Data value and entities to DHIS2",
+	"version" : "2",
+	"name" : "Import and Export Data value and entities Tracked",
+	"description" : "Import and Export Data value and entities Tracked to DHIS2",
 	"launch_path" : "index.html",
 	"installs_allowed_from" : null,
 	"default_locale" : "es",

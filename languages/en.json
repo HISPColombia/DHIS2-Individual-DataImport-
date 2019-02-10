@@ -1,6 +1,6 @@
 {
 	"_______________ Common ":" for APPS_____________",
-  "TITLE_APPS":"Import Tracker Data Values and Entities",
+  "TITLE_APPS":"IMPORT & EXPORT DATA VALUES AND ENTITIES TRACKED - VERSION #2",
   "YES":"Si",
   "NO": "No",
   "IMPORT_START": "Import Start",
@@ -16,7 +16,7 @@
   "MSG_ERRORFORIMPORT": "The file has the error: ",
   "MSG_READYFORIMPORT": "File ready for import",
   "MSG_INTRO": "verify that the json file has the structute and conent required for data import in DHIS, acording to type information",
-  "MSG_FINISHED": "Importación finalizada",
+  "MSG_FINISHED": "Importaci�n finalizada",
   "LIST_ERROR": "Error List",
    "BTN_SAVEERROR": "Save error list",
   "BTN_SAVEJSON": "Save objects don't imported",
@@ -24,5 +24,23 @@
   "LABEL_LEN": "Length: ",
     "LABEL_GOODIMPORT": "Imported",
   "LABEL_BADIMPORT": "Not Imported",
-  "LABEL_CHANGESTATUS": "Change enrollment Status"
+  "LABEL_CHANGESTATUS": "Change enrollment Status",
+  "LABEL_OPTIONEXPORT":"Export Information",
+  "LABEL_SELECT_PROGRAM":"Select Program",
+  "LABEL_START_DATE":"Start Date",
+  "LABEL_END_DATE":"End Date",
+  "BTN_IMPORT":"Import",
+  "BTN_EXPORT":"Export",
+  "TITLE_OPTION":"Option panel",
+  "BTN_GENERATE_FILES":"Generate files",
+  "LABEL_INFOFILE_DOWNLOAD":"File to download",
+  "LABEL_INFOFILE_DOWNLOAD_TEI":"Download Entities",
+  "LABEL_INFOFILE_DOWNLOAD_ENROLLMENT":"Download Enrollments",
+  "LABEL_INFOFILE_DOWNLOAD_EVENT":"Download Events",
+  "BTN_RESET":"Reset Export",
+  "LABEL_PROGRAM_NAME":"Program",
+  "LABEL_DESCRIPTION_DOWNLOAD":"Don't forget to change the file name before saving it, over all when it is zipped",
+  "LABEL_DESCRIPTION_DATE":"Keep in mind that the date range corresponds to the period in which the information was updated",
+  "LABEL_ZIP":"zipped"
+
 }

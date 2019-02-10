@@ -82,3 +82,12 @@ Dhis2Api.factory("events", ['$resource', 'commonvariable', function ($resource, 
 		});
 }]);
 
+Dhis2Api.factory("programs", ['$resource', 'commonvariable', function ($resource, commonvariable) {
+			return $resource(commonvariable.url + "/programs?fields=id,displayName,organisationUnits[path]",
+			{ paging: 'false' },
+			{
+				get: { method: "GET"}
+			});
+}]);
+
+

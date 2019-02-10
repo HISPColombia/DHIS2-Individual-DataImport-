@@ -104,11 +104,7 @@
         if ($scope.webMethod != "POST")
             var param = { id: value[uid] };
         else{
-            
-            if($scope.typeinformation=="events")
-                var param = { importStrategy: $scope.strategy };
-            else
-                var param = { strategy: $scope.strategy };
+            var param = { strategy: $scope.strategy };
         }
             
         
@@ -121,11 +117,16 @@
     $scope.excecuteMethod = function (currentMethod, param, value, position) {
         currentMethod(param, value).$promise.then(function (result) {
             if ($scope.lenposition * 1 == 1) {
-                    if (result.response.ignored > 0) {
+                   if(result.response!=undefined) {
+                   if (result.response.ignored > 0) {
                         $scope.Importerror.push(result.response.importSummaries);
                         $scope.ImportValueError.push(value);
                         $scope.objNoImported = $scope.objNoImported + 1;
                     }
+                    else {
+                        $scope.objImported = $scope.objImported + 1;
+                    }
+                }
                     else {
                         $scope.objImported = $scope.objImported + 1;
                     }
