@@ -1,4 +1,4 @@
-﻿appImport.controller('importController', ['$scope', '$filter', 'commonvariable', 'trackedEntityInstances', 'enrollments', 'events', 'status', function ($scope, $filter, commonvariable, trackedEntityInstances, enrollments, events, status) {
+﻿appImport.controller('importController', ['$scope', '$filter', 'commonvariable', 'trackedEntityInstances', 'enrollments', 'events','relationships', 'status', function ($scope, $filter, commonvariable, trackedEntityInstances, enrollments, events,relationships, status) {
 
     //variables
     var $translate = $filter('translate');
@@ -22,6 +22,7 @@
         "trackedEntityInstances": trackedEntityInstances,
         "enrollments": enrollments,
         "events": events,
+        "relationships":relationships,
         "status": status
     };
 
@@ -122,9 +123,6 @@
                         $scope.Importerror.push(result.response.importSummaries);
                         $scope.ImportValueError.push(value);
                         $scope.objNoImported = $scope.objNoImported + 1;
-                    }
-                    else {
-                        $scope.objImported = $scope.objImported + 1;
                     }
                 }
                     else {
