@@ -1,6 +1,6 @@
 {
 	"_______________ Common ":" for APPS_____________",
-  "TITLE_APPS":"IMPORT & EXPORT DATA VALUES AND ENTITIES TRACKED - VERSION #2",
+  "TITLE_APPS":"IMPORT & EXPORT DATA VALUES AND ENTITIES TRACKED - VERSION #3",
   "YES":"Si",
   "NO": "No",
   "IMPORT_START": "Iniciar Importacion",
@@ -15,7 +15,7 @@
   "LABEL_METHOD": "Metodo",
    "MSG_ERRORFORIMPORT": "El archivo presenta el siguiente error: ",
   "MSG_READYFORIMPORT": "Archivo listo para importar",
-  "MSG_INTRO": "Recuerde verficar que el archivo cumpla con la estructura y contenido requerida por DHIS de acuerdo al tipo de información a importar",
+  "MSG_INTRO": "Recuerde verficar que el archivo cumpla con la estructura y contenido requerida por DHIS de acuerdo al tipo de información a importar (trackedEntityInstances, enrollments, events,relationships)",
   "MSG_FINISHED": "Importación finalizada",
   "LIST_ERROR": "Lista de errores",
   "BTN_SAVEERROR": "Guardar Lista de Errores",
