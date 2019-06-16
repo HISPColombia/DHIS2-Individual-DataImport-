@@ -82,6 +82,20 @@ Dhis2Api.factory("events", ['$resource', 'commonvariable', function ($resource, 
 		});
 }]);
 
+////Api Relationship
+Dhis2Api.factory("relationships", ['$resource', 'commonvariable', function ($resource, commonvariable) {
+    return $resource(commonvariable.url + "/relationships/:id",
+		{
+		    id: '@id'
+		},
+		{
+		    POST: { method: "POST" },
+		    DELETE: { method: "DELETE" },
+		    PUT: { method: "PUT" },
+		    PATCH: { method: "PATCH" }
+		});
+}]);
+
 Dhis2Api.factory("programs", ['$resource', 'commonvariable', function ($resource, commonvariable) {
 			return $resource(commonvariable.url + "/programs?fields=id,displayName,organisationUnits[path]",
 			{ paging: 'false' },
